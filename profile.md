@@ -20,6 +20,8 @@ My goals for Web Design this semester are:
 4. Use my abilities in web page design to design my own web page to promote myself online
 ## External Links ##
 ` My Github Profile:`
-[](https://github.com/Westc20714/Web-Design-Fall-2026.git)
+[Github](https://github.com/Westc20714)
 `My NewPaltz Email:`
-[](westc2@newpaltz.edu)
+[Email](westc2@newpaltz.edu)
+## A Picture That I Like ##
+![ThisImage](https://i.pinimg.com/736x/74/e2/f8/74e2f8a539f914febdfd0f67c1b37d1c.jpg)
