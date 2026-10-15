@@ -1,5 +1,5 @@
 # Profile #
-
+![ThisImage](IMG_6954.jpeg)
 ## About Me ##
 My name is **Connor West** and one thing about me is that I *really* enjoy listening and performing any kind of music
 
@@ -23,5 +23,25 @@ My goals for Web Design this semester are:
 [Github](https://github.com/Westc20714)
 `My NewPaltz Email:`
 [Email](westc2@newpaltz.edu)
-## A Picture That I Like ##
+
+## Extra ##
+
+### A Picture That I Like ###
 ![ThisImage](https://i.pinimg.com/736x/74/e2/f8/74e2f8a539f914febdfd0f67c1b37d1c.jpg)
+- **This is a cat playing MineSweeper, which is a game I like to play.**
+### One of My Favorite Quotes ###
+> “We are all dreaming of some magical rose garden over the horizon instead of enjoying the roses blooming outside our windows today” - Dale Carnegie
+### Snippet of Code ###
+```
+let a = [9, 3, 5, 1];
+a.sort((x, y) => x - y); // Ascending
+console.log(a);
+
+a.sort((x, y) => y - x); // Descending
+console.log(a);
+```
+### Features I Plan To Build ###
+- [x] Add an image to a webpage
+- [] Add a video to a webpage
+- [] Implement a game into a webpage
+
