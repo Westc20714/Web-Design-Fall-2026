@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cat Breeds | The Cat Club</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <a class="logo" href="index.html">🐈 The Cat Club</a>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="breeds.html">Breeds</a>
+      <a href="facts.html">Cat Facts</a>
+      <a href="care.html">Cat Care</a>
+      <a href="gallery.html">Gallery</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Explore Cat <span>Breeds</span> 🐾</h1>
+
+    <p>
+      From fluffy giants to tiny lap cats, discover the different
+      breeds of cats and find out what makes each one special.
+    </p>
+
+    <div class="search-area">
+      <input
+        type="search"
+        id="breed-search"
+        placeholder="Search breeds, traits, or coat types..."
+        aria-label="Search cat breeds"
+      >
+    </div>
+  </section>
+
+  <main>
+    <div class="section-heading">
+      <h2>Meet the Cats</h2>
+      <p id="result-count">Explore these popular cat breeds.</p>
+    </div>
+
+    <div class="breed-grid" id="breed-grid">
+
+      <article class="breed-card">
+        <img
+          src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&w=800&q=85"
+          alt="Domestic shorthair cat"
+          loading="lazy"
+        >
+        <div class="breed-info">
+          <h3>Domestic Shorthair</h3>
+          <span class="tag">Adaptable</span>
+          <span class="tag">Playful</span>
+          <p>
+            A popular mixed-ancestry cat found in many colors
+            and patterns. Each cat has its own personality.
+          </p>
+          <div class="details">
+            <strong>Coat:</strong> Short and varied<br>
+            <strong>Personality:</strong> Varies by individual
+          </div>
+        </div>
+      </article>
+
+      <article class="breed-card">
+        <img
+          src="https://images.unsplash.com/photo-1495360010541-f48722b34f7d?auto=format&fit=crop&w=800&q=85"
+          alt="Long-haired fluffy cat"
+          loading="lazy"
+        >
+        <div class="breed-info">
+          <h3>Persian</h3>
+          <span class="tag">Calm</span>
+          <span class="tag">Fluffy</span>
+          <p>
+            Famous for a long, luxurious coat and round face.
+            Persians benefit from frequent grooming.
+          </p>
+          <div class="details">
+            <strong>Coat:</strong> Long and thick<br>
+            <strong>Personality:</strong> Often gentle
+          </div>
+        </div>
+      </article>
+
+      <article class="breed-card">
+        <img
+          src="https://images.unsplash.com/photo-1511044568932-338cba0ad803?auto=format&fit=crop&w=800&q=85"
+          alt="Gray short-haired cat"
+          loading="lazy"
+        >
+        <div class="breed-info">
+          <h3>British Shorthair</h3>
+          <span class="tag">Easygoing</span>
+          <span class="tag">Independent</span>
+          <p>
+            Recognizable by its round face, sturdy build,
+            and dense, plush coat.
+          </p>
+          <div class="details">
+            <strong>Coat:</strong> Short and dense<br>
+            <strong>Personality:</strong> Often relaxed
+          </div>
+        </div>
+      </article>
+
+      <article class="breed-card">
+        <img
+          src="https://images.unsplash.com/photo-1533738363-b7f9aef128ce?auto=format&fit=crop&w=800&q=85"
+          alt="Siamese cat"
+          loading="lazy"
+        >
+        <div class="breed-info">
+          <h3>Siamese</h3>
+          <span class="tag">Social</span>
+          <span class="tag">Vocal</span>
+          <p>
+            Known for blue eyes, color-point markings, and
+            a tendency to communicate with their people.
+          </p>
+          <div class="details">
+            <strong>Coat:</strong> Short and sleek<br>
+            <strong>Personality:</strong> Often outgoing
+          </div>
+        </div>
+      </article>
+
+      <article class="breed-card">
+        <img
+          src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?auto=format&fit=crop&w=800&q=85"
+          alt="Tabby cat sitting and looking at camera"
+          loading="lazy"
+        >
+        <div class="breed-info">
+          <h3>Maine Coon</h3>
+          <span class="tag">Large</span>
+          <span class="tag">Sociable</span>
+          <p>
+            One of the largest domestic cat breeds, with
+            a long coat, tufted ears, and bushy tail.
+          </p>
+          <div class="details">
+            <strong>Coat:</strong> Long and shaggy<br>
+            <strong>Personality:</strong> Often friendly
+          </div>
+        </div>
+      </article>
+
+      <article class="breed-card">
+        <img
+          src="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?auto=format&fit=crop&w=800&q=85"
+          alt="Cat relaxing indoors"
+          loading="lazy"
+        >
+        <div class="breed-info">
+          <h3>Ragdoll</h3>
+          <span class="tag">Affectionate</span>
+          <span class="tag">Gentle</span>
+          <p>
+            A blue-eyed breed with a semi-long coat.
+            Many enjoy companionship and relaxed play.
+          </p>
+          <div class="details">
+            <strong>Coat:</strong> Semi-long<br>
+            <strong>Personality:</strong> Often sociable
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <div id="no-results">
+      <h2>No cats found! 🐈</h2>
+      <p>Try another breed name or personality trait.</p>
+    </div>
+
+    <section class="tips">
+      <h2>🐾 Choosing the Right Cat</h2>
+      <p>
+        Every cat is an individual. Think about your lifestyle,
+        available space, grooming time, and how much interaction
+        you can provide. Consider adopting from a shelter, too!
+        Spend time getting to know a cat before deciding whether
+        you are a good match for one another.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with 🧡 for cat lovers everywhere.</p>
+    <p>© 2026 The Cat Club</p>
+  </footer>
+
+  <script>
+    const searchInput = document.getElementById("breed-search");
+    const breedCards = document.querySelectorAll(".breed-card");
+    const resultCount = document.getElementById("result-count");
+    const noResults = document.getElementById("no-results");
+
+    function filterBreeds() {
+      const searchTerm = searchInput.value.toLowerCase().trim();
+      let visibleCount = 0;
+
+      breedCards.forEach(function(card) {
+        const breedText = card.textContent.toLowerCase();
+        const matches = breedText.includes(searchTerm);
+
+        card.style.display = matches ? "" : "none";
+
+        if (matches) {
+          visibleCount++;
+        }
+      });
+
+      resultCount.textContent =
+        visibleCount + (visibleCount === 1
+          ? " breed found."
+          : " breeds found.");
+
+      noResults.style.display =
+        visibleCount === 0 ? "block" : "none";
+    }
+
+    searchInput.addEventListener("input", filterBreeds);
+
+    resultCount.textContent =
+      breedCards.length + " breeds to explore.";
+  </script>
+
+</body>
+</html>

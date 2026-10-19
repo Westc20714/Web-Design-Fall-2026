@@ -1,0 +1,389 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cat Facts | The Cat Club</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <header>
+    <a class="logo" href="index.html">🐈 The Cat Club</a>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="breeds.html">Breeds</a>
+      <a href="facts.html">Cat Facts</a>
+      <a href="care.html">Cat Care</a>
+      <a href="gallery.html">Gallery</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Fun Cat <span>Facts!</span> 🧠</h1>
+
+    <p>
+      How much do you really know about cats?
+      Discover surprising facts about their senses,
+      behavior, history, and amazing abilities.
+    </p>
+  </section>
+
+  <!-- RANDOM FACT GENERATOR -->
+  <section class="featured">
+    <div class="section-title">
+      <h2>🎲 Random Cat Fact</h2>
+      <p>Click the button to discover something new!</p>
+    </div>
+
+    <div class="fact-box">
+      <div class="fact-emoji">🐾</div>
+
+      <p id="random-fact" aria-live="polite">
+        A cat's nose print is unique, much like a human fingerprint.
+      </p>
+
+      <button class="button" id="random-button" type="button">
+        Another Fact!
+      </button>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section>
+    <div class="section-title">
+      <h2>Did You Know?</h2>
+      <p>Explore some fascinating things about our feline friends.</p>
+    </div>
+
+    <div class="facts-grid">
+
+      <article class="fact-card">
+        <div class="emoji">👂</div>
+        <h3>Amazing Hearing</h3>
+        <p>
+          Cats can hear many high-frequency sounds that
+          humans cannot, helping them detect small animals.
+        </p>
+      </article>
+
+      <article class="fact-card">
+        <div class="emoji">👃</div>
+        <h3>Unique Noses</h3>
+        <p>
+          Every cat has a distinctive nose pattern,
+          similar to how human fingerprints differ.
+        </p>
+      </article>
+
+      <article class="fact-card">
+        <div class="emoji">😴</div>
+        <h3>Sleep Experts</h3>
+        <p>
+          Cats commonly sleep around 12–16 hours a day,
+          although kittens and older cats may sleep more.
+        </p>
+      </article>
+
+      <article class="fact-card">
+        <div class="emoji">🐈</div>
+        <h3>Whisker Sensors</h3>
+        <p>
+          Whiskers are sensitive hairs that help cats
+          sense nearby objects and changes in their surroundings.
+        </p>
+      </article>
+
+      <article class="fact-card">
+        <div class="emoji">🗣️</div>
+        <h3>Different Meows</h3>
+        <p>
+          Cats communicate through sounds, posture, facial
+          expressions, and scent. Some are especially vocal.
+        </p>
+      </article>
+
+      <article class="fact-card">
+        <div class="emoji">🌀</div>
+        <h3>Righting Reflex</h3>
+        <p>
+          Cats have a righting reflex that can help them
+          rotate their bodies while falling. Falls can still
+          cause serious injuries, so keep windows secure.
+        </p>
+      </article>
+
+      <article class="fact-card">
+        <div class="emoji">🧭</div>
+        <h3>Excellent Balance</h3>
+        <p>
+          Cats have flexible bodies and a strong sense of
+          balance that helps them move across narrow surfaces.
+        </p>
+      </article>
+
+      <article class="fact-card">
+        <div class="emoji">🐾</div>
+        <h3>Quiet Walkers</h3>
+        <p>
+          Cats have soft paw pads that help them move
+          quietly when exploring their surroundings.
+        </p>
+      </article>
+
+      <article class="fact-card">
+        <div class="emoji">🏛️</div>
+        <h3>Ancient Companions</h3>
+        <p>
+          Cats have lived alongside humans for thousands
+          of years, including in ancient Egyptian society.
+        </p>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- INTERACTIVE QUIZ -->
+  <section class="quiz-section">
+    <div class="section-title">
+      <h2>🐱 Test Your Cat Knowledge!</h2>
+      <p>Take this short quiz and see how many you can get right.</p>
+    </div>
+
+    <div class="quiz-box">
+      <p id="question" aria-live="polite">
+        Question 1: What is the main purpose of a cat's whiskers?
+      </p>
+
+      <div class="answers" id="answers"></div>
+
+      <p id="quiz-feedback" aria-live="polite"></p>
+
+      <p id="score" aria-live="polite">Score: 0 / 5</p>
+
+      <button
+        class="button"
+        id="next-question"
+        type="button"
+      >
+        Next Question →
+      </button>
+
+      <button
+        class="button"
+        id="restart-quiz"
+        type="button"
+        style="display: none;"
+      >
+        Play Again ↻
+      </button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Made with 🧡 for cat lovers everywhere.</p>
+    <p>© 2026 The Cat Club</p>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    // RANDOM CAT FACTS
+    const catFacts = [
+      "A cat's nose print is unique, much like a human fingerprint.",
+      "Cats have excellent hearing and can detect high-frequency sounds.",
+      "A group of cats can be called a clowder.",
+      "Cats use their whiskers to sense nearby objects.",
+      "Many adult cats sleep around 12–16 hours per day.",
+      "Cats communicate through body language, sounds, and scent.",
+      "A cat's tail can communicate its mood and intentions.",
+      "Cats have a specialized reflective layer in their eyes that helps them see in low light.",
+      "Cats have five toes on each front paw in the usual arrangement, but often four on each back paw.",
+      "Cats can make a range of vocalizations, including meows, chirps, and trills.",
+      "A cat's purr can occur in different situations, including when relaxed.",
+      "Cats use scent glands around their face to mark familiar objects."
+    ];
+
+    let previousFact = -1;
+
+    document
+      .getElementById("random-button")
+      .addEventListener("click", function () {
+        let index;
+
+        do {
+          index = Math.floor(Math.random() * catFacts.length);
+        } while (
+          catFacts.length > 1 && index === previousFact
+        );
+
+        previousFact = index;
+
+        document.getElementById("random-fact").textContent =
+          catFacts[index];
+      });
+
+    // CAT QUIZ
+    const questions = [
+      {
+        question: "What is the main purpose of a cat's whiskers?",
+        answers: [
+          "To help sense nearby objects",
+          "To help them hear",
+          "To keep their ears warm",
+          "To help them smell food"
+        ],
+        correct: 0
+      },
+      {
+        question: "Which sense is especially well-developed in cats?",
+        answers: [
+          "Taste for sweet foods",
+          "Hearing",
+          "Color vision in complete darkness",
+          "Smelling underwater"
+        ],
+        correct: 1
+      },
+      {
+        question: "What is a group of cats sometimes called?",
+        answers: [
+          "A flock",
+          "A herd",
+          "A clowder",
+          "A school"
+        ],
+        correct: 2
+      },
+      {
+        question: "What do cats use their tails for?",
+        answers: [
+          "Communicating and maintaining balance",
+          "Chewing food",
+          "Hearing distant sounds",
+          "Smelling objects"
+        ],
+        correct: 0
+      },
+      {
+        question: "Which statement about cats is true?",
+        answers: [
+          "All cats have identical personalities",
+          "Cats never communicate with sounds",
+          "Cats cannot learn routines",
+          "Cats communicate in several different ways"
+        ],
+        correct: 3
+      }
+    ];
+
+    const questionElement = document.getElementById("question");
+    const answersElement = document.getElementById("answers");
+    const feedbackElement = document.getElementById("quiz-feedback");
+    const scoreElement = document.getElementById("score");
+    const nextButton = document.getElementById("next-question");
+    const restartButton = document.getElementById("restart-quiz");
+
+    let currentQuestion = 0;
+    let score = 0;
+    let answered = false;
+
+    function showQuestion() {
+      answered = false;
+
+      const q = questions[currentQuestion];
+
+      questionElement.textContent =
+        "Question " + (currentQuestion + 1) + ": " + q.question;
+
+      answersElement.replaceChildren();
+      feedbackElement.textContent = "";
+      nextButton.style.display = "none";
+
+      q.answers.forEach(function(answer, index) {
+        const button = document.createElement("button");
+
+        button.className = "answer";
+        button.textContent = answer;
+        button.type = "button";
+
+        button.addEventListener("click", function() {
+          checkAnswer(index, button);
+        });
+
+        answersElement.appendChild(button);
+      });
+
+      scoreElement.textContent =
+        "Score: " + score + " / " + questions.length;
+    }
+
+    function checkAnswer(selected, selectedButton) {
+      if (answered) return;
+
+      answered = true;
+
+      const q = questions[currentQuestion];
+      const buttons = answersElement.querySelectorAll(".answer");
+
+      buttons.forEach(function(button) {
+        button.disabled = true;
+      });
+
+      if (selected === q.correct) {
+        score++;
+        selectedButton.classList.add("correct");
+        feedbackElement.textContent = "Correct! Great job! 🐾";
+      } else {
+        selectedButton.classList.add("incorrect");
+        buttons[q.correct].classList.add("correct");
+
+        feedbackElement.textContent =
+          "Not quite! The correct answer is: " +
+          q.answers[q.correct] + ".";
+      }
+
+      scoreElement.textContent =
+        "Score: " + score + " / " + questions.length;
+
+      if (currentQuestion < questions.length - 1) {
+        nextButton.style.display = "inline-block";
+      } else {
+        questionElement.textContent = "Quiz complete! 🎉";
+
+        feedbackElement.textContent =
+          "You scored " + score + " out of " +
+          questions.length + "! " +
+          (score === questions.length
+            ? "You're a cat expert!"
+            : "Keep learning about our feline friends!");
+
+        restartButton.style.display = "inline-block";
+      }
+    }
+
+    nextButton.addEventListener("click", function() {
+      if (!answered) return;
+
+      currentQuestion++;
+      showQuestion();
+    });
+
+    restartButton.addEventListener("click", function() {
+      currentQuestion = 0;
+      score = 0;
+      restartButton.style.display = "none";
+      showQuestion();
+    });
+
+    showQuestion();
+  </script>
+
+</body>
+</html>

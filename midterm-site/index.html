@@ -1,0 +1,420 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>The Cat Club | Home</title>
+
+  <style>
+    /* SITE GUIDE */
+
+    .guide-section {
+      background: #fff;
+    }
+
+    .guide-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .guide-card {
+      padding: 28px;
+      background: #fffaf3;
+      border: 1px solid #f0e5d8;
+      border-radius: 18px;
+      transition: transform 0.2s;
+    }
+
+    .guide-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .guide-card .emoji {
+      font-size: 2.5rem;
+      margin-bottom: 12px;
+    }
+
+    .guide-card h3 {
+      font-size: 1.35rem;
+      margin-bottom: 10px;
+    }
+
+    .guide-card p {
+      color: #665b52;
+      margin-bottom: 18px;
+    }
+
+    /* CAT FACT */
+
+    .fact-section {
+      background: #342a25;
+      color: white;
+      text-align: center;
+    }
+
+    .fact-section h2 {
+      font-size: 2.2rem;
+      margin-bottom: 12px;
+    }
+
+    .fact-section .subtitle {
+      color: #e4d4c8;
+      margin-bottom: 25px;
+    }
+
+    .fact-box {
+      max-width: 700px;
+      margin: auto;
+      padding: 32px;
+      border-radius: 20px;
+      background: #493b33;
+    }
+
+    #cat-fact {
+      font-size: 1.25rem;
+      margin-bottom: 22px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 30px 8%;
+      background: #f9e8d6;
+      color: #665247;
+      text-align: center;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin: 12px 0;
+    }
+
+    .footer-links a {
+      color: #a65224;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 850px) {
+      .hero {
+        gap: 25px;
+      }
+
+      .breed-grid,
+      .guide-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav {
+        justify-content: center;
+        gap: 14px;
+      }
+
+      nav a {
+        font-size: 0.9rem;
+      }
+
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 6%;
+      }
+
+      .hero p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero img {
+        width: 100%;
+        height: 270px;
+      }
+
+      section.content {
+        padding: 45px 6%;
+      }
+
+      .breed-grid,
+      .guide-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .fact-box {
+        padding: 24px;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <header>
+    <a class="logo" href="index.html">🐈 The Cat Club</a>
+
+    <nav>
+      <a href="index.html" class="active" aria-current="page">Home</a>
+      <a href="breeds.html">Breeds</a>
+      <a href="facts.html">Cat Facts</a>
+      <a href="care.html">Cat Care</a>
+      <a href="gallery.html">Gallery</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- WELCOME SECTION -->
+    <section class="hero">
+      <div class="hero-text">
+        <span class="eyebrow">🐾 Your feline-friendly corner of the internet</span>
+
+        <h1>A world made<br>for <span>cat lovers.</span></h1>
+
+        <p>
+          Welcome to The Cat Club! Discover amazing cat breeds,
+          learn surprising feline facts, and find helpful tips
+          for giving your furry friend a happy and healthy life.
+        </p>
+
+        <a href="breeds.html" class="button">
+          Explore Cat Breeds →
+        </a>
+      </div>
+
+      <img
+        src="surprised-cat.jpeg"
+        alt="A curious cat looking toward the camera"
+      >
+    </section>
+
+    <!-- FEATURED BREEDS -->
+    <section class="content" id="featured-breeds">
+      <div class="section-heading">
+        <div>
+          <h2>Meet the Cats 🐈</h2>
+          <p>Explore some popular cat breeds.</p>
+        </div>
+
+        <a href="breeds.html" class="text-link">
+          All Breeds →
+        </a>
+      </div>
+
+      <div class="breed-grid">
+
+        <article class="breed-card">
+          <img
+            src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&w=800&q=85"
+            alt="Orange and white domestic cat"
+            loading="lazy"
+          >
+
+          <div class="breed-info">
+            <span class="tag">Varied Personalities</span>
+            <h3>Domestic Shorthair</h3>
+            <p>
+              Cats with short coats and a huge variety of
+              colors, patterns, and individual personalities.
+            </p>
+
+            <a href="breeds.html" class="text-link">
+              Discover more →
+            </a>
+          </div>
+        </article>
+
+        <article class="breed-card">
+          <img
+            src="https://images.unsplash.com/photo-1495360010541-f48722b34f7d?auto=format&fit=crop&w=800&q=85"
+            alt="A fluffy cat relaxing indoors"
+            loading="lazy"
+          >
+
+          <div class="breed-info">
+            <span class="tag">Long-haired</span>
+            <h3>Persian</h3>
+            <p>
+              Recognized for its luxurious coat and distinctive
+              round face. Regular grooming is important.
+            </p>
+
+            <a href="breeds.html" class="text-link">
+              Discover more →
+            </a>
+          </div>
+        </article>
+
+        <article class="breed-card">
+          <img
+            src="https://images.unsplash.com/photo-1511044568932-338cba0ad803?auto=format&fit=crop&w=800&q=85"
+            alt="A gray cat with bright eyes"
+            loading="lazy"
+          >
+
+          <div class="breed-info">
+            <span class="tag">Plush Coat</span>
+            <h3>British Shorthair</h3>
+            <p>
+              Known for a dense coat, round face, and
+              sturdy appearance.
+            </p>
+
+            <a href="breeds.html" class="text-link">
+              Discover more →
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- EXPLORE ALL PAGES -->
+    <section class="content guide-section">
+      <div class="section-heading">
+        <div>
+          <h2>Explore The Cat Club 🧡</h2>
+          <p>Everything you need to know about our feline friends.</p>
+        </div>
+      </div>
+
+      <div class="guide-grid">
+
+        <article class="guide-card">
+          <div class="emoji">🐈</div>
+          <h3>Cat Breeds</h3>
+          <p>
+            Learn about different breeds, coat types,
+            appearances, and common personality traits.
+          </p>
+
+          <a href="breeds.html" class="button">
+            Explore Breeds →
+          </a>
+        </article>
+
+        <article class="guide-card">
+          <div class="emoji">🧠</div>
+          <h3>Cat Facts</h3>
+          <p>
+            Discover interesting facts about cat behavior,
+            senses, history, and special abilities.
+          </p>
+
+          <a href="facts.html" class="button">
+            Discover Facts →
+          </a>
+        </article>
+
+        <article class="guide-card">
+          <div class="emoji">❤️</div>
+          <h3>Cat Care</h3>
+          <p>
+            Find tips about feeding, grooming, exercise,
+            health, and keeping cats safe at home.
+          </p>
+
+          <a href="care.html" class="button">
+            Learn Cat Care →
+          </a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- INTERACTIVE CAT FACT -->
+    <section class="content fact-section">
+      <h2>Did You Know? 🐾</h2>
+
+      <p class="subtitle">
+        Here is a little something for curious cat lovers.
+      </p>
+
+      <div class="fact-box">
+        <p id="cat-fact" aria-live="polite">
+          A cat's nose print is unique, much like a human fingerprint.
+        </p>
+
+        <button class="button" id="fact-button" type="button">
+          Show Another Fact!
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p><strong>🐈 The Cat Club</strong></p>
+
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="breeds.html">Breeds</a>
+      <a href="facts.html">Cat Facts</a>
+      <a href="care.html">Cat Care</a>
+    </div>
+
+    <p>Made with 🧡 for cat lovers everywhere.</p>
+    <p>© 2026 The Cat Club</p>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    const catFacts = [
+      "A cat's nose print is unique, much like a human fingerprint.",
+      "Cats have excellent hearing and can detect high-frequency sounds.",
+      "A group of cats can be called a clowder.",
+      "Cats use their whiskers to sense nearby objects.",
+      "Many adult cats sleep around 12–16 hours per day.",
+      "Cats communicate using body language, sounds, and scent.",
+      "A cat's tail can communicate its mood and intentions.",
+      "Cats have a specialized reflective layer in their eyes that helps them see in low light.",
+      "Cats have five toes on each front paw in the usual arrangement, but often four on each back paw.",
+      "Cats can communicate with sounds such as meows, chirps, and trills."
+    ];
+
+    const factElement = document.getElementById("cat-fact");
+    const factButton = document.getElementById("fact-button");
+
+    let previousFact = -1;
+
+    factButton.addEventListener("click", function() {
+      let randomIndex;
+
+      do {
+        randomIndex = Math.floor(Math.random() * catFacts.length);
+      } while (
+        catFacts.length > 1 && randomIndex === previousFact
+      );
+
+      previousFact = randomIndex;
+      factElement.textContent = catFacts[randomIndex];
+    });
+  </script>
+
+</body>
+</html>

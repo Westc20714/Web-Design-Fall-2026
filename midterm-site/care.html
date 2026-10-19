@@ -1,0 +1,294 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cat Care | The Cat Club</title>
+
+ <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <header>
+    <a class="logo" href="index.html">🐈 The Cat Club</a>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="breeds.html">Breeds</a>
+      <a href="facts.html">Cat Facts</a>
+      <a href="care.html">Cat Care</a>
+      <a href="gallery.html">Gallery</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Give Your Cat the <span>Best Care</span> ❤️</h1>
+
+      <p>
+        Learn how to keep your feline friend happy, healthy,
+        comfortable, and safe with these essential cat-care tips.
+      </p>
+
+      <a href="#daily-checklist" class="button">
+        Explore Daily Care ↓
+      </a>
+    </div>
+
+    <img
+      src="lounge-cat.jpeg"
+      alt="A cat relaxing comfortably at home"
+    >
+  </section>
+
+  <main>
+
+    <!-- BASIC CARE -->
+    <section class="content">
+      <div class="section-title">
+        <h2>The Essentials of Cat Care 🐾</h2>
+        <p>Small daily habits make a big difference.</p>
+      </div>
+
+      <div class="care-grid">
+
+        <article class="care-card">
+          <div class="emoji">🥣</div>
+          <h3>Food & Water</h3>
+          <p>Give your cat balanced nutrition and clean drinking water.</p>
+          <ul>
+            <li>Choose complete cat food suited to their life stage.</li>
+            <li>Keep fresh water available at all times.</li>
+            <li>Follow appropriate portions and feeding guidance.</li>
+            <li>Avoid sudden diet changes unless advised by a vet.</li>
+          </ul>
+        </article>
+
+        <article class="care-card">
+          <div class="emoji">🪮</div>
+          <h3>Grooming</h3>
+          <p>Regular grooming helps maintain a comfortable coat.</p>
+          <ul>
+            <li>Brush regularly, especially long-haired cats.</li>
+            <li>Check for tangles and unusual skin changes.</li>
+            <li>Trim claws carefully when needed.</li>
+            <li>Introduce grooming gradually and gently.</li>
+          </ul>
+        </article>
+
+        <article class="care-card">
+          <div class="emoji">🩺</div>
+          <h3>Veterinary Care</h3>
+          <p>Preventive care helps your cat stay healthy.</p>
+          <ul>
+            <li>Arrange regular veterinary checkups.</li>
+            <li>Keep vaccinations and parasite prevention current.</li>
+            <li>Monitor appetite, behavior, and litter-box habits.</li>
+            <li>Contact a vet about concerning changes.</li>
+          </ul>
+        </article>
+
+        <article class="care-card">
+          <div class="emoji">🧶</div>
+          <h3>Exercise & Play</h3>
+          <p>Play provides physical activity and mental stimulation.</p>
+          <ul>
+            <li>Use toys that encourage chasing and pouncing.</li>
+            <li>Provide scratching posts and climbing spaces.</li>
+            <li>Offer several short play sessions.</li>
+            <li>Rotate toys to keep things interesting.</li>
+          </ul>
+        </article>
+
+        <article class="care-card">
+          <div class="emoji">🏠</div>
+          <h3>A Safe Home</h3>
+          <p>Create a calm environment where your cat can relax.</p>
+          <ul>
+            <li>Provide a quiet resting place and hiding spots.</li>
+            <li>Secure windows and balconies.</li>
+            <li>Keep toxic plants and household chemicals away.</li>
+            <li>Give your cat access to a clean litter box.</li>
+          </ul>
+        </article>
+
+        <article class="care-card">
+          <div class="emoji">💛</div>
+          <h3>Love & Attention</h3>
+          <p>Build trust while respecting your cat's boundaries.</p>
+          <ul>
+            <li>Let your cat approach you voluntarily.</li>
+            <li>Learn their body language.</li>
+            <li>Provide companionship and enrichment.</li>
+            <li>Respect their need for personal space.</li>
+          </ul>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- INTERACTIVE CHECKLIST -->
+    <section class="content checklist-section" id="daily-checklist">
+      <div class="section-title">
+        <h2>Your Daily Cat-Care Checklist 📋</h2>
+        <p>Check off the tasks you complete throughout the day.</p>
+      </div>
+
+      <div class="checklist-box">
+        <h3>Today's Tasks 🐈</h3>
+        <p>
+          Use this checklist as a reminder. Individual cats may
+          have additional needs based on age and health.
+        </p>
+
+        <div class="progress-track">
+          <div class="progress-bar" id="progress-bar"></div>
+        </div>
+
+        <label class="task">
+          <input type="checkbox">
+          <span>Provide fresh drinking water.</span>
+        </label>
+
+        <label class="task">
+          <input type="checkbox">
+          <span>Serve appropriate meals according to the feeding plan.</span>
+        </label>
+
+        <label class="task">
+          <input type="checkbox">
+          <span>Scoop the litter box and check that it is clean.</span>
+        </label>
+
+        <label class="task">
+          <input type="checkbox">
+          <span>Spend time playing and interacting with your cat.</span>
+        </label>
+
+        <label class="task">
+          <input type="checkbox">
+          <span>Check that your cat seems comfortable and behaves normally.</span>
+        </label>
+
+        <label class="task">
+          <input type="checkbox">
+          <span>Make sure your cat has a safe, comfortable resting place.</span>
+        </label>
+
+        <p id="progress-text" aria-live="polite">
+          0 of 6 tasks completed
+        </p>
+
+        <button class="button" id="reset-button" type="button">
+          Reset Checklist ↻
+        </button>
+      </div>
+    </section>
+
+    <!-- SAFETY -->
+    <section class="content">
+      <div class="section-title">
+        <h2>Keeping Your Cat Safe ⚠️</h2>
+        <p>Knowing what to avoid is just as important as knowing what to do.</p>
+      </div>
+
+      <div class="safety-box">
+        <h3>Important Safety Tips</h3>
+
+        <ul>
+          <li>
+            <strong>Dangerous foods:</strong>
+            Keep chocolate, onions, garlic, alcohol, and other
+            potentially toxic foods away from cats.
+          </li>
+
+          <li>
+            <strong>Plants:</strong>
+            Lilies are extremely dangerous to cats. All parts,
+            including pollen, can cause severe poisoning.
+            Contact a veterinarian immediately if exposure occurs.
+          </li>
+
+          <li>
+            <strong>Human medication:</strong>
+            Never give human medicines to your cat unless a
+            veterinarian specifically instructs you to.
+          </li>
+
+          <li>
+            <strong>Outdoor hazards:</strong>
+            Secure windows and balconies, and consider safe
+            indoor enrichment or supervised outdoor access.
+          </li>
+
+          <li>
+            <strong>Emergency signs:</strong>
+            Difficulty breathing, collapse, suspected poisoning,
+            or straining without passing urine requires urgent
+            veterinary attention.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Made with 🧡 for cat lovers everywhere.</p>
+    <p>© 2026 The Cat Club</p>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    const checkboxes = document.querySelectorAll(
+      '.task input[type="checkbox"]'
+    );
+
+    const progressBar = document.getElementById("progress-bar");
+    const progressText = document.getElementById("progress-text");
+    const resetButton = document.getElementById("reset-button");
+
+    function updateProgress() {
+      const total = checkboxes.length;
+
+      const completed = Array.from(checkboxes).filter(
+        checkbox => checkbox.checked
+      ).length;
+
+      const percentage = total === 0
+        ? 0
+        : (completed / total) * 100;
+
+      progressBar.style.width = percentage + "%";
+
+      progressText.textContent =
+        completed + " of " + total + " tasks completed";
+
+      if (completed === total) {
+        progressText.textContent =
+          "All tasks completed! Great job caring for your cat! 🐾";
+      }
+    }
+
+    checkboxes.forEach(function(checkbox) {
+      checkbox.addEventListener("change", updateProgress);
+    });
+
+    resetButton.addEventListener("click", function() {
+      checkboxes.forEach(function(checkbox) {
+        checkbox.checked = false;
+      });
+
+      updateProgress();
+    });
+
+    updateProgress();
+  </script>
+
+</body>
+</html>

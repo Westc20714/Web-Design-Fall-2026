@@ -1,0 +1,449 @@
+
+/* =========================
+   THE CAT CLUB - MAIN STYLE
+   ========================= */
+
+:root {
+  --cream: #fff8ee;
+  --orange: #f4a261;
+  --dark-orange: #e98b45;
+  --brown: #3c2b22;
+  --light-brown: #795b49;
+  --white: #ffffff;
+  --shadow: 0 4px 12px rgba(60, 43, 34, 0.10);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--cream);
+  color: var(--brown);
+  line-height: 1.6;
+}
+
+/* HEADER */
+
+header {
+  background: var(--orange);
+  padding: 22px 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0 0 12px;
+  font-size: 2rem;
+}
+
+/* NAVIGATION */
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+nav a {
+  color: var(--brown);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--white);
+}
+
+nav a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--brown);
+  outline-offset: 4px;
+}
+
+/* HEADINGS AND TEXT */
+
+h1,
+h2,
+h3 {
+  line-height: 1.25;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+p {
+  margin-top: 0;
+}
+
+a {
+  color: #99521e;
+}
+
+a:hover {
+  color: var(--dark-orange);
+}
+
+/* HERO SECTION */
+
+.hero {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  margin-bottom: 15px;
+}
+
+.hero p {
+  max-width: 650px;
+  margin: 0 auto 24px;
+  font-size: 1.1rem;
+}
+
+/* BUTTONS */
+
+button,
+.button {
+  display: inline-block;
+  border: none;
+  border-radius: 24px;
+  padding: 11px 20px;
+  background: var(--orange);
+  color: var(--brown);
+  font: inherit;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s ease,
+              transform 0.2s ease;
+}
+
+button:hover,
+.button:hover {
+  background: var(--dark-orange);
+  color: var(--brown);
+  transform: translateY(-2px);
+}
+
+/* PAGE SECTIONS */
+
+section {
+  padding: 30px 20px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.container {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+}
+
+/* CARD GRIDS */
+
+.card-grid,
+.gallery {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(min(230px, 100%), 1fr));
+  gap: 22px;
+  padding: 20px;
+}
+
+.card,
+.cat-card,
+.breed-card,
+.fact-card,
+.care-card,
+.guide-card {
+  background: var(--white);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease;
+}
+
+.card:hover,
+.cat-card:hover,
+.breed-card:hover,
+.fact-card:hover,
+.care-card:hover,
+.guide-card:hover {
+  transform: translateY(-4px);
+}
+
+/* IMAGES */
+
+.card img,
+.cat-card img,
+.breed-card img,
+.gallery img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card h3,
+.cat-card h2,
+.breed-card h2,
+.fact-card h3,
+.care-card h3,
+.guide-card h3 {
+  margin: 15px 15px 8px;
+}
+
+.card p,
+.cat-card p,
+.breed-card p,
+.fact-card p,
+.care-card p,
+.guide-card p {
+  margin: 0 15px 18px;
+}
+
+/* SEARCH AND FILTERS */
+
+.filters,
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px 20px;
+}
+
+input[type="text"],
+input[type="search"] {
+  display: block;
+  width: min(450px, 100%);
+  margin: 15px auto;
+  padding: 12px 15px;
+  border: 1px solid #d8bda8;
+  border-radius: 10px;
+  background: var(--white);
+  color: var(--brown);
+  font: inherit;
+}
+
+/* HIDDEN ITEMS FOR JAVASCRIPT FILTERS */
+
+.hidden {
+  display: none !important;
+}
+
+/* QUIZZES AND INTERACTIVE AREAS */
+
+.quiz,
+.random-fact,
+.checklist,
+.content-panel {
+  width: min(750px, calc(100% - 40px));
+  margin: 25px auto;
+  padding: 25px;
+  background: var(--white);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+}
+
+.quiz label,
+.checklist label {
+  display: block;
+  margin: 12px 0;
+}
+
+.checklist input {
+  margin-right: 8px;
+  accent-color: var(--dark-orange);
+}
+
+.progress-bar {
+  width: 100%;
+  height: 12px;
+  overflow: hidden;
+  background: #f0dfd0;
+  border-radius: 10px;
+}
+
+.progress {
+  height: 100%;
+  width: 0;
+  background: var(--dark-orange);
+  border-radius: 10px;
+  transition: width 0.2s ease;
+}
+
+/* GALLERY */
+
+.intro {
+  padding: 35px 20px 15px;
+  text-align: center;
+}
+
+.intro p {
+  max-width: 650px;
+  margin: 10px auto;
+}
+
+/* FOOTER */
+
+footer {
+  margin-top: 30px;
+  padding: 25px 20px;
+  background: var(--orange);
+  text-align: center;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+footer a {
+  color: var(--brown);
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 600px) {
+  header {
+    padding: 18px 12px;
+  }
+
+  header h1 {
+    font-size: 1.7rem;
+  }
+
+  nav {
+    gap: 12px 16px;
+  }
+
+  .hero {
+    padding: 40px 18px;
+  }
+
+  section {
+    padding: 24px 12px;
+  }
+
+  .card-grid,
+  .gallery {
+    padding: 12px;
+    gap: 16px;
+  }
+
+  .quiz,
+  .random-fact,
+  .checklist,
+  .content-panel {
+    width: calc(100% - 24px);
+    padding: 18px;
+  }
+}
+
+/* General image settings */
+img {
+  max-width: 100%;
+}
+
+/* Images inside cards */
+.card img,
+.cat-card img,
+.breed-card img,
+.fact-card img,
+.care-card img,
+.guide-card img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Larger homepage hero image, if you have one */
+.hero img {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  height: 350px;
+  object-fit: cover;
+  margin: 20px auto;
+  border-radius: 14px;
+}
+
+/* Images that should keep their original proportions */
+.profile-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.home-hero {
+  background: #ffecd8;
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.featured-cats {
+  margin-top: 30px;
+}
+
+.breed-search {
+  max-width: 450px;
+  margin: 20px auto;
+}
+
+.breed-card img {
+  height: 250px;
+  object-fit: cover;
+}
+
+.cat-quiz {
+  background: #fff0df;
+  padding: 25px;
+  border-radius: 14px;
+}
+
+.quiz-result {
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.daily-checklist {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+}
+
+.care-warning {
+  border-left: 5px solid #e98b45;
+  padding: 15px;
+}
+
+.cat-gallery {
+  grid-template-columns:
+    repeat(auto-fit, minmax(230px, 1fr));
+}
+
+.cat-gallery img {
+  height: 240px;
+  object-fit: cover;
+}
+

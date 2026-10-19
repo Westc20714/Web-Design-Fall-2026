@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cat Gallery | The Cat Club</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>🐱 The Cat Club</h1>
+
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="breeds.html">Breeds</a>
+      <a href="facts.html">Cat Facts</a>
+      <a href="care.html">Cat Care</a>
+      <a href="gallery.html" class="active"
+         aria-current="page">Gallery</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>Welcome to the Cat Gallery!</h2>
+      <p>
+        Explore a collection of adorable cats, from playful
+        kittens to sleepy seniors. Choose a category to find
+        your favorite photos.
+      </p>
+    </section>
+
+    <div class="filters" aria-label="Filter cat photos">
+      <button type="button" data-filter="all">All Cats</button>
+      <button type="button" data-filter="kittens">Kittens</button>
+      <button type="button" data-filter="sleepy">Sleepy Cats</button>
+      <button type="button" data-filter="playful">Playful Cats</button>
+    </div>
+
+    <section class="gallery" aria-label="Cat photo gallery">
+      <article class="cat-card" data-category="kittens">
+        <img src="chair-cat.jpeg"
+             alt="A cat looking toward the camera">
+        <h2>Curious Kitties</h2>
+        <p>Little explorers always have something new to discover.</p>
+      </article>
+
+      <article class="cat-card" data-category="sleepy">
+        <img src="sleep-cat.jpeg"
+             alt="A relaxed cat resting">
+        <h2>Sleepy Friends</h2>
+        <p>Sometimes the best activity is a long, peaceful nap.</p>
+      </article>
+
+      <article class="cat-card" data-category="playful">
+        <img src="window-cat.jpeg"
+             alt="A cat ready to play">
+        <h2>Playtime!</h2>
+        <p>Toys, games, and plenty of energy make for a fun day.</p>
+      </article>
+
+      <article class="cat-card" data-category="kittens">
+        <img src="stairs-cat.jpeg"
+             alt="A fluffy cat sitting">
+        <h2>Fluffy Faces</h2>
+        <p>Every cat has a unique personality and charm.</p>
+      </article>
+
+      <article class="cat-card" data-category="sleepy">
+        <img src="festive-cat.jpeg"
+             alt="A calm cat relaxing">
+        <h2>Relaxation Time</h2>
+        <p>A cozy spot can turn into a cat's favorite place.</p>
+      </article>
+
+      <article class="cat-card" data-category="playful">
+        <img src="eat-cat.jpeg"
+             alt="A cat making a funny expression">
+        <h2>Silly Cats</h2>
+        <p>Our feline friends always find ways to make us smile.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>🐾 The Cat Club — Made for cat lovers</p>
+  </footer>
+
+  <script>
+    const filterButtons = document.querySelectorAll("[data-filter]");
+    const catCards = document.querySelectorAll(".cat-card");
+
+    filterButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        const category = button.dataset.filter;
+
+        catCards.forEach(card => {
+          const matches =
+            category === "all" ||
+            card.dataset.category === category;
+
+          card.classList.toggle("hidden", !matches);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
