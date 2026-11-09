@@ -1,0 +1,13 @@
+/* B"H
+*/
+
+.special-paragraph {
+    margin: 2rem;
+    background-color: #14679e
+}
+
+.highlighted {
+    display: block;
+    width: 50%;
+    background-color: #070707;
+}
